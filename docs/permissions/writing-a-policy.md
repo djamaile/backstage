@@ -37,11 +37,7 @@ As we confirmed in the previous section, we know that this now prevents us from 
 Let's change the policy to the following:
 
 ```diff
-- import { IdentityClient } from '@backstage/plugin-auth-node';
-+ import {
-+   BackstageIdentityResponse,
-+   IdentityClient
-+ } from '@backstage/plugin-auth-node';
++ import { BackstageIdentityResponse } from '@backstage/plugin-auth-node';
   import {
   AuthorizeResult,
   PolicyDecision,

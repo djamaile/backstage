@@ -128,11 +128,7 @@ In order to test the logic above, the integrators of your backstage instance nee
 ```diff
 // packages/backend/src/plugins/permission.ts
 
-- import { IdentityClient } from '@backstage/plugin-auth-node';
-+ import {
-+   BackstageIdentityResponse,
-+   IdentityClient
-+ } from '@backstage/plugin-auth-node';
++ import { BackstageIdentityResponse } from '@backstage/plugin-auth-node';
   import {
     PermissionPolicy,
 +   PolicyQuery,
