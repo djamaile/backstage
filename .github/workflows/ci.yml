@@ -30,6 +30,7 @@ jobs:
           # This will let us diff only the contents of the PR, without fetching more history
           diffRef: 'refs/pull/${{ github.event.pull_request.number }}/merge'
           github-token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN  }}
+          app-id: ${{ secrets.BACKSTAGE_GOALIE_APPLICATION_ID }}
       - uses: actions/checkout@v3
 
       - name: use node.js ${{ matrix.node-version }}
