@@ -21,6 +21,17 @@ jobs:
     if: github.repository == 'djamaile/backstage'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN }}
+      - name: Configure Git
+        run: |
+          git config --global user.email noreply@backstage.io
+          git config --global user.name 'Github changeset workflow'
+          git status
       - uses: backstage/actions/changeset-feedback@v0.5.9
         with:
           # Fetch the commit that's merged into the base rather than the target ref
