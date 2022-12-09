@@ -32,3 +32,5 @@ jobs:
           github-token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN  }}
           issue-number: github.event.pull_request.number
           app-id: djamaile
+          private-key: djamaile
+          installation-id: djamaile
