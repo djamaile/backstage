@@ -33,6 +33,7 @@ jobs:
           git config --global user.name 'Github changeset workflow'
           git status
       - uses: backstage/actions/changeset-feedback@v0.5.9
+        name: Another one
         with:
           # Fetch the commit that's merged into the base rather than the target ref
           # This will let us diff only the contents of the PR, without fetching more history
