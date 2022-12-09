@@ -30,7 +30,18 @@ jobs:
           # This will let us diff only the contents of the PR, without fetching more history
           diffRef: 'refs/pull/${{ github.event.pull_request.number }}/merge'
           github-token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN  }}
-          issue-number: ${{ steps.pr-number.outputs.pr-number }}
+      - uses: actions/checkout@v3
+
+      - name: use node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/ # Needed for auth
+
+      - name: yarn install
+        uses: backstage/actions/yarn-install@v0.5.8
+        with:
+          cache-prefix: ${{ runner.os }}-v${{ matrix.node-version }}
 
   # The verify jobs runs all the verification that doesn't require a
   # diff towards master, since it takes some time to fetch that.
