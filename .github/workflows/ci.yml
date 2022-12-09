@@ -30,3 +30,4 @@ jobs:
           # This will let us diff only the contents of the PR, without fetching more history
           diffRef: 'refs/pull/${{ github.event.pull_request.number }}/merge'
           github-token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN  }}
+          issue-number: github.event.pull_request.number
