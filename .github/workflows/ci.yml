@@ -34,7 +34,7 @@ jobs:
           # This will let us diff only the contents of the PR, without fetching more history
           diffRef: 'origin/main'
           github-token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN  }}
-          issue-number: ${{ steps.pr-number.outputs.pr-number }}
+          issue-number: '1'
           app-id: ${{ secrets.APP_ID }}
           private-key:  ${{ secrets.PRIVATE_KEY  }}
           installation-id: ${{ secrets.INSTALLATION_ID }}
