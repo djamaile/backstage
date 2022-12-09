@@ -18,6 +18,7 @@ permissions:
 jobs:
   feedback:
     # prevent running towards forks and version packages
+    if: github.repository == 'djamaile/backstage'
     runs-on: ubuntu-latest
     steps:
       - uses: backstage/actions/changeset-feedback@v0.5.9
