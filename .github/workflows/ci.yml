@@ -25,7 +25,7 @@ jobs:
 
     steps:
      - name: Configure Git
-        run: |
+       run: |
           git config --global user.email noreply@backstage.io
           git config --global user.name 'Github changeset workflow'
       - uses: backstage/actions/changeset-feedback@changeset-patches
