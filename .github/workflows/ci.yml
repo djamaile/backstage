@@ -34,6 +34,7 @@ jobs:
         run: |
           git config --global user.email noreply@backstage.io
           git config --global user.name 'Github changeset workflow'
+          git branch -r
           git diff origin/master
       - uses: backstage/actions/changeset-feedback@changeset-patches
         name: Generate changeset
