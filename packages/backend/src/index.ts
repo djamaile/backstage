@@ -82,6 +82,7 @@ function makeCreateEnv(config: Config) {
   });
 
   root.info(`Created UrlReader ${reader}`);
+  root.info(`Fake change`);
 
   return (plugin: string): PluginEnvironment => {
     const logger = root.child({ type: 'plugin', plugin });
