@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Checkout
-        run: git fetch origin main
+        run: git fetch origin master
       - uses: backstage/actions/changeset-feedback@changeset-patches
         name: Generate feedback
         with:
