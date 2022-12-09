@@ -21,7 +21,7 @@ jobs:
     if: github.repository == 'djamaile/backstage'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkouts
         uses: actions/checkout@v3
         with:
           fetch-depth: 2
