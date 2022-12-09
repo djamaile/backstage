@@ -24,22 +24,12 @@ jobs:
       NODE_OPTIONS: --max-old-space-size=4096
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN }}
-      - name: Configure Git
-        run: |
-          git config --global user.email noreply@backstage.io
-          git config --global user.name 'Github changeset workflow'
       - uses: backstage/actions/changeset-feedback@changeset-patches
         name: Generate changeset
         with:
           # Fetch the commit that's merged into the base rather than the target ref
           # This will let us diff only the contents of the PR, without fetching more history
-          diffRef: 'origin'
+          diffRef: 'origin/master'
           github-token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN  }}
           issue-number: github.event.pull_request.number
           app-id: djamaile
