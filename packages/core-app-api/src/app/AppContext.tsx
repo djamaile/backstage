@@ -21,7 +21,6 @@ import {
 } from '@backstage/version-bridge';
 import { AppContext as AppContextV1 } from './types';
 
-//  tezt
 const AppContext = createVersionedContext<{ 1: AppContextV1 }>('app-context');
 
 type Props = {
