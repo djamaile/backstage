@@ -30,7 +30,6 @@ jobs:
           # Fetch the commit that's merged into the base rather than the target ref
           # This will let us diff only the contents of the PR, without fetching more history
           diffRef: 'origin/main'
-          github-token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN  }}
           issue-number: ${{ steps.pr-number.outputs.pr-number }}
           app-id: ${{ secrets.APP_ID }}
           private-key:  ${{ secrets.PRIVATE_KEY  }}
