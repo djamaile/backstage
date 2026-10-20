@@ -40,11 +40,7 @@ Scope: The Backstage home page and information architecture
 
 | Name                     | Organization | Team           | GitHub                                   | Discord           |
 | ------------------------ | ------------ | -------------- | ---------------------------------------- | ----------------- |
-| Avantika Iyer            | Spotify      | Infinite Buck$ | [tikabom](http://github.com/tikabom)     | -                 |
-| Emma Indal               | Spotify      | Infinite Buck$ | [emmaindal](http://github.com/emmaindal) | emmaindal#7503    |
-| Djamaile Rahamat         | Spotify      | Infinite Buck$ | [djamaile](http://github.com/djamaile)   | dyoqi             |
-| Raghunandan Balachandran | Spotify      | Infinite Buck$ | [soapraj](http://github.com/soapraj)     | raghunandanb#1114 |
-| Bailey Brooks            | Spotify      | Infinite Buck$ | [bailey](http://github.com/bailey)       | \_bailey4         |
+| Avantika Iyer            | Spotify      | Imaginary Goats | [tikabom](http://github.com/tikabom)     | -                 |
 
 ### Search
 
